@@ -1,0 +1,7 @@
+<h2>Listing albums</h2>
+<p><i><%= "No albums to show" if @albums.empty?%></i></p>
+<% for album in @albums %>
+	<p><%= album.title unless @albums.empty?%></p>
+<% end %>
+
+<h2><%= link_to("Create new album", new_album_path) %></h2>
